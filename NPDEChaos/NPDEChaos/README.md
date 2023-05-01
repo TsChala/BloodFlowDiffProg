@@ -1,6 +1,7 @@
-# NPDEChaos
-This is the source code of the Neural Partial Differential Equations for Chaotic Processes Paper.
+# SeqData.jl
 
-It is not meant as a package that is actively developed but just as a mere upload of the source code of the paper. For all details please read the paper.
 
-Most contents and methods discussed in the paper will be kept up to date in [another repo](https://github.com/maximilian-gelbrecht/ChaoticNDETools.jl) those script folder also contains the same example system, however this is not meant as an exact reproduction of the paper. 
+SeqData is a small package that provides a data type for sequential data for learning problems. It saves a lot of memory as it does not save the identical data many times but uses a modified indexing.
+
+[![Build Status](https://travis-ci.com/maximilian-gelbrecht/SeqData.jl.svg?branch=master)](https://travis-ci.com/maximilian-gelbrecht/SeqData.jl/branches)
+[![doc dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://maximilian-gelbrecht.github.io/SeqData.jl/dev)
