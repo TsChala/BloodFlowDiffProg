@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mitk_job model_name="stenosis_4_cm" mesh_name="stenosis_4_cm" status="No Data Files" version="1.0">
+    <job>
+        <basic_props>
+            <prop key="Fluid Density" value="1.06" />
+            <prop key="Fluid Viscosity" value="0.04" />
+            <prop key="IC File" value="" />
+            <prop key="Initial Pressure" value="0" />
+            <prop key="Initial Velocities" value="0.0001 0.0001 0.0001" />
+        </basic_props>
+        <cap_props>
+            <cap name="inlet">
+                <prop key="Analytic Shape" value="parabolic" />
+                <prop key="BC Type" value="Prescribed Velocities" />
+                <prop key="Flip Normal" value="True" />
+                <prop key="Flow Rate" value="# time [s] flow [cm3/s]&#x0A;0 1.06299358164133&#x0A;0.008890118302113 0.999269427277544&#x0A;0.018433438457293 0.885951230333761&#x0A;0.026241733983888 0.793880580459541&#x0A;0.031446807869645 0.730137939250858&#x0A;0.041866541412587 0.652259023976752&#x0A;0.05056220549429 0.652320646793079&#x0A;0.057526953135164 0.694889688311794&#x0A;0.06797681338831 0.772916498345086&#x0A;0.075824821396537 0.88635794092152&#x0A;0.081928219004751 0.971440563424256&#x0A;0.088028877821127 1.04234993817177&#x0A;0.09761191045794 1.13454383367865&#x0A;0.107181249135569 1.15587149040944&#x0A;0.121092942270376 1.14888346303795&#x0A;0.13064995638474 1.10643150487026&#x0A;0.144556171935874 1.07109698198834&#x0A;0.159326476311505 1.00742212587761&#x0A;0.174099519478972 0.957920517522105&#x0A;0.190611695462781 0.908431233729864&#x0A;0.207126610238426 0.873115197692842&#x0A;0.230602164467189 0.859108331541706&#x0A;0.258431028320477 0.873478772309171&#x0A;0.275826464671639 0.894861889574652&#x0A;0.293220531626883 0.909158382962523&#x0A;0.308867249390277 0.880922808521476&#x0A;0.32189568215773 0.80306238009227&#x0A;0.336670094721116 0.760647395614372&#x0A;0.34710489161916 0.760721342993965&#x0A;0.358418840696803 0.810407819798452&#x0A;0.368872809137705 0.909694501464568&#x0A;0.376722186541851 1.03022256791861&#x0A;0.385441130354167 1.15075679665429&#x0A;0.395897837586905 1.26421672607563&#x0A;0.40461815079514 1.39183757868891&#x0A;0.415944424436049 1.50530367039188&#x0A;0.429019416664727 1.66838845380137&#x0A;0.440348429097472 1.79602779325956&#x0A;0.450802397538374 1.89531447492568&#x0A;0.463860957016032 1.97335977180386&#x0A;0.480393673938616 2.03016984617576&#x0A;0.504748380346978 2.06577550944952&#x0A;0.524748407734896 2.06591724192707&#x0A;0.543877499318725 2.05896618824538&#x0A;0.564733399155631 1.98824784422847&#x0A;0.590810805629313 1.93882634553419&#x0A;0.618619128543825 1.84689742813752&#x0A;0.649040258870605 1.77624686921858&#x0A;0.689018403311747 1.66314435213194&#x0A;0.731603877581483 1.5429736980126&#x0A;0.764630968340936 1.45816837818333&#x0A;0.801141802316744 1.40173420299103&#x0A;0.834174370659871 1.34527537867221&#x0A;0.880249065729635 1.28182236470026&#x0A;0.931539789852502 1.2113197005405&#x0A;0.961969136554792 1.18318888488721&#x0A;1 1.06299358164133" />
+                <prop key="Fourier Modes" value="10" />
+                <prop key="Original File" value="inlet.flow" />
+                <prop key="Period" value="1" />
+                <prop key="Point Number" value="201" />
+            </cap>
+            <cap name="outlet">
+                <prop key="BC Type" value="Resistance" />
+                <prop key="Pressure" value="0" />
+                <prop key="Values" value="109236.90537" />
+            </cap>
+        </cap_props>
+        <wall_props>
+            <prop key="Type" value="rigid" />
+        </wall_props>
+        <var_props />
+        <solver_props>
+            <prop key="Backflow Stabilization Coefficient" value="0.2" />
+            <prop key="Flow Advection Form" value="Convective" />
+            <prop key="Force Calculation Method" value="Velocity Based" />
+            <prop key="Maximum Number of Iterations for svLS Continuity Loop" value="400" />
+            <prop key="Maximum Number of Iterations for svLS Momentum Loop" value="2" />
+            <prop key="Maximum Number of Iterations for svLS NS Solver" value="1" />
+            <prop key="Minimum Required Iterations" value="4" />
+            <prop key="Number of Krylov Vectors per GMRES Sweep" value="100" />
+            <prop key="Number of Solves per Left-hand-side Formation" value="1" />
+            <prop key="Number of Timesteps" value="30000" />
+            <prop key="Number of Timesteps between Restarts" value="100" />
+            <prop key="Output Surface Stress" value="True" />
+            <prop key="Pressure Coupling" value="Implicit" />
+            <prop key="Print Average Solution" value="True" />
+            <prop key="Print Error Indicators" value="False" />
+            <prop key="Quadrature Rule on Boundary" value="3" />
+            <prop key="Quadrature Rule on Interior" value="2" />
+            <prop key="Residual Control" value="True" />
+            <prop key="Residual Criteria" value="0.01" />
+            <prop key="Step Construction" value="4" />
+            <prop key="Time Integration Rho Infinity" value="0.5" />
+            <prop key="Time Integration Rule" value="Second Order" />
+            <prop key="Time Step Size" value="1e-4" />
+            <prop key="Tolerance on Continuity Equations" value="0.4" />
+            <prop key="Tolerance on Momentum Equations" value="0.05" />
+            <prop key="Tolerance on svLS NS Solver" value="0.4" />
+            <prop key="svLS Type" value="NS" />
+        </solver_props>
+        <run_props />
+    </job>
+</mitk_job>

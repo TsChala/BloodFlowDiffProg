@@ -1,0 +1,23 @@
+#!/bin/csh
+#SBATCH --job-name=case3
+#SBATCH -o slurm-%j.out-%N # name of the stdout, using the job number (%j) and the first node (%N)
+#SBATCH -e slurm-%j.err-%N # name of the stderr, using job and first node values
+#SBATCH --nodes=4
+#SBATCH --ntasks=48
+###SBATCH --mem=4000
+#SBATCH --partition=lonepeak
+#SBATCH --account=arzani
+#SBATCH --time=72:00:00                                                                                                                                                                                                                                                                     
+
+
+setenv WORKDIR $HOME/LANL/CFD/cases/case3/
+setenv SCRDIR /scratch/general/nfs1/u1447794/LANL/CFD/cases/case3/
+mkdir -p $SCRDIR
+cp -r $WORKDIR/* $SCRDIR
+cd $SCRDIR
+                   
+module load gcc/8.5.0
+module load openmpi/4.1.3
+								   
+mpirun -np $SLURM_NTASKS /uufs/chpc.utah.edu/common/home/u1447794/software/svSolver/svSolver-build/svSolver-build/bin/svsolver > simvascular_case3.log
+
