@@ -31,6 +31,7 @@ function train_loop(uinit,adtype,optf,train_maxiters,learning_rate,optimizer_typ
     callback = function (θ,l,pred)
         global iters += 1 
         println("Iteration: $iters || Loss: $l")
+		flush(stdout)
         append!(PRED, [pred])
         append!(LOSS, l)
         append!(PARS, [θ])     
@@ -227,9 +228,11 @@ function train_loop(uinit,adtype,optf,train_maxiters,learning_rate,optimizer_typ
             optprob = Optimization.OptimizationProblem(optf,uinit);    
             # Training 
             res = Optimization.solve(optprob, 
-                                    Optim.BFGS(initial_stepnorm=0.01), 
+                                    Optim.BFGS(initial_stepnorm=0.01),
                                     callback = callback,       
-                                    allow_f_increases = false);
+                                    allow_f_increases = false,
+									maxiters = train_maxiters,
+									f_tol = 1e-9);
             println("saving BFGS checkpoint...")
             jldsave(path_checkpoint_new, ckpt=res)
             return res
@@ -237,6 +240,9 @@ function train_loop(uinit,adtype,optf,train_maxiters,learning_rate,optimizer_typ
         
         resnew = train_BFGS(uinit)
         jldsave("ptrained_BFGS.jld2",p=resnew.u)
+		println("saved trained params to ptrained_BFGS.jld2")
+		uinit = resnew.u
+		
         return uinit
         
      else 
