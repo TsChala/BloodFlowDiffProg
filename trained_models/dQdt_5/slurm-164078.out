@@ -1,0 +1,4 @@
+slurmstepd: error: *** JOB 164078 ON kepler32 CANCELLED AT 2023-07-31T07:48:04 DUE TO TIME LIMIT ***
+
+[21659] signal (15): Terminated
+in expression starting at /home/sci/hunor.csala/LANL/NODE/dQdt_5/dQdt_5.jl:444

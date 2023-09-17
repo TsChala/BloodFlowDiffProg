@@ -1,0 +1,13 @@
+┌ Error: This version of CUDA.jl only supports NVIDIA drivers for CUDA 10.2 or higher (yours is for CUDA 8.0.0)
+└ @ CUDA ~/anaconda3/envs/julia_env/share/julia/packages/CUDA/ZdCxS/src/initialization.jl:65
+┌ Warning: Assignment to `prob` in soft scope is ambiguous because a global variable by the same name exists: `prob` will be treated as a new local. Disambiguate by using `local prob` to suppress this warning or `global prob` to assign to the existing global variable.
+└ @ ~/LANL/NODE/dQdz_1/dQdz_1.jl:439
+┌ Warning: Assignment to `prob` in soft scope is ambiguous because a global variable by the same name exists: `prob` will be treated as a new local. Disambiguate by using `local prob` to suppress this warning or `global prob` to assign to the existing global variable.
+└ @ ~/LANL/NODE/dQdz_1/dQdz_1.jl:525
+┌ Warning: Assignment to `prob` in soft scope is ambiguous because a global variable by the same name exists: `prob` will be treated as a new local. Disambiguate by using `local prob` to suppress this warning or `global prob` to assign to the existing global variable.
+└ @ ~/LANL/NODE/dQdz_1/dQdz_1.jl:571
+┌ Warning: Layer with Float32 parameters got Float64 input.
+│   The input will be converted, but any earlier layers may be very slow.
+│   layer = Dense(101 => 10, tanh)  # 1_020 parameters
+│   summary(x) = "101×10 Matrix{Float64}"
+└ @ Flux ~/anaconda3/envs/julia_env/share/julia/packages/Flux/n3cOc/src/layers/stateless.jl:60

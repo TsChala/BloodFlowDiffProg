@@ -1,0 +1,7 @@
+┌ Error: This version of CUDA.jl only supports NVIDIA drivers for CUDA 10.2 or higher (yours is for CUDA 8.0.0)
+└ @ CUDA ~/anaconda3/envs/julia_env/share/julia/packages/CUDA/ZdCxS/src/initialization.jl:65
+ERROR: LoadError: syntax: incomplete: "function" at /home/sci/hunor.csala/LANL/NODE/dQdt_dSdt_1/dQdt_dSdt.jl:224 requires end
+Stacktrace:
+ [1] top-level scope
+   @ ~/LANL/NODE/dQdt_dSdt_1/dQdt_dSdt.jl:224
+in expression starting at /home/sci/hunor.csala/LANL/NODE/dQdt_dSdt_1/dQdt_dSdt.jl:224
