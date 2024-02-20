@@ -1,1 +1,6 @@
 Reduced order modelling of blood flow in stenosed arteries using differentiable programming and universal differential equations using Julia
+
+NeurIPS - paper, poster and codes from NeurIPS ML4PS 2023
+SimVascular - codes and scripts for generating SimVascular simulations automatically from the command line
+trained_models - some trained models that can be used for further cases
+tutorials - neural ODE/PDE & UDE tutorials and codes from others
