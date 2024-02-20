@@ -1,0 +1,16 @@
+#!/bin/bash                                                                                                                                                                                                                                                                                        
+#SBATCH --job-name=dQdz_1Long
+#SBATCH --time=100:00:00     # 20 min, shorter time, quicker start, max run time                                                                                                                                                                                                            
+###SBATCH --mem=64000                     # 2GB of memory                                                                                                                                                                                                                                            
+#SBATCH --nodes=1                                                                                                                                                                                                                                                                                  
+#SBATCH --ntasks=1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
+
+
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate julia_env
+
+
+mkdir -p output
+								
+julia dQdz_1.jl > log_dQdz.out
