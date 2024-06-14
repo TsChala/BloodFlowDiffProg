@@ -4,3 +4,5 @@ NeurIPS - paper, poster and codes from NeurIPS ML4PS 2023
 SimVascular - codes and scripts for generating SimVascular simulations automatically from the command line
 trained_models - some trained models that can be used for further cases
 tutorials - neural ODE/PDE & UDE tutorials and codes from others
+data - 3D averaged data for 100 cases (10 stenosis blockage ratios x 10 inlet boundary condition flow rate waveforms)
+models - spatial neural ODE models
